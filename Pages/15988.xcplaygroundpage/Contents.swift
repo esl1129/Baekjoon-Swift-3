@@ -58,20 +58,18 @@ final class FileIO {
 }
 
 
-func solution() ->Int {
-    let N = fIO.readInt()
-    var dp = [0,1,2,4]
-    if N < 4 {
-        return dp[N]
-    }
+func solution() {
+    let fIO = FileIO()
 
-    for i in 4…N{
+    var dp = [0,1,2,4]
+    for i in 4...1000001{
         dp.append((dp[i-1]+dp[i-2]+dp[i-3])%1000000009)
     }
-    return dp[N]
+    
+    let TC = fIO.readInt()
+    for _ in 0..<TC{
+        print(dp[fIO.readInt()])
+    }
+    return
 }
-let fIO = FileIO()
-
-for _ in 0..<fIO.readInt(){
-    print(solution())
-}
+solution()
