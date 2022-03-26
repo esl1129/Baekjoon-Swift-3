@@ -1,5 +1,5 @@
 # Baekjoon-Swift-3
-Baekjoon Algorithm 
+Baekjoon Algorithm
 
 Rank : GOLD 1
 
